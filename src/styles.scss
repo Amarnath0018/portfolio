@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import './app/styles/themes';
+
+html, body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.mat-mdc-button {
+  color: var(--text-color);
+}

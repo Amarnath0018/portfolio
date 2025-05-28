@@ -1,0 +1,3 @@
+<select (change)="onThemeChange($event.target.value)">
+  <option *ngFor="let theme of themes" [value]="theme">{{ theme | titlecase }}</option>
+</select>

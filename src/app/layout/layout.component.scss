@@ -1,0 +1,17 @@
+.content {
+  min-height: calc(100vh - 100px); // adjust based on header/footer height
+  padding: 20px;
+}
+
+.header, .footer {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+}
+body {
+  height: 50vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+html {
+  data-theme: dark;
+}
