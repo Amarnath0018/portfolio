@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #52ebff, #f8c7d8, #f8d499); // initial linear-gradient(135deg, #e0f7fa, #fce4ec, #fff3e0)
+  background: linear-gradient(135deg, #52ebff, #f8c7d8, #f8d499);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +19,36 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   color: #000;
+  height: 70%;
+  width: 70%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.box {
+  color: white;
+  font-weight: bold;
+  height: 100%;
+}
+
+.a{
+  width: 50%;
+  padding-left: 5rem;
+  padding-top: 15%;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #000428, #004e92, #4286f4); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For Firefox */
+  color: transparent;     /* Fallback */
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .cta-button {
@@ -32,7 +62,40 @@
   transition: all 0.3s ease;
 }
 
-.cta-button:hover {
+.cta-button:hover , .login-button:hover{
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.b{
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center; 
+  width: 50%;
+}
+
+img{
+  width: 70%;
+  height: auto;
+  background: linear-gradient(135deg, #f8d499, #f8c7d8, #52ebff);
+  object-fit: cover;
+  border-radius: 50%;
+}
+.login-button {
+  background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  display: flex;              /* Add */
+  justify-content: center;    /* Center horizontally */
+  align-items: center;        /* Center vertically */
+}
+
+.login-icon {
+  font-size: 26px;            /* Match to desired size */
+  color: #000428;
+  font-weight: bold;
 }
