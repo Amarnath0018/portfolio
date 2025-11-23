@@ -1,5 +1,5 @@
 <section class="landing-page">
-        <button class="login-button" mat-icon-button matTooltip="Login">
+        <button class="login-button" mat-icon-button matTooltip="Login" (click)="login('', '')">
           <mat-icon class="login-icon">login</mat-icon>
         </button>
   <div class="glass-card">
@@ -7,7 +7,7 @@
       <div class="box a">
         <h1 class="gradient-text" >Hello, I'm Amarnath</h1>
         <p class="gradient-text">Full Stack Developer | Java & Angular</p>
-        <button class="cta-button">Explore My Work</button>
+        <button class="cta-button" (click)="login('guest_user@gmail.com','12345')">Explore My Work</button>
       </div>
       <div class="box b">
         <img src="assets/images/landingPage.png" />
