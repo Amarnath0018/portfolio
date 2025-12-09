@@ -1,8 +1,4 @@
 import { Routes } from '@angular/router';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { AuthGuard } from './core/guards/auth.guard';
-import { RedirectGuard } from './core/guards/redirect.guard';
-import { LayoutComponent } from './layout/layout.component';
 
 export const routes: Routes = [
    {
@@ -14,6 +10,11 @@ export const routes: Routes = [
     path: 'home',
     loadComponent: () => import('./layout/layout.component')
       .then(m => m.LayoutComponent)
+  },
+  {
+    path: 'login',
+    loadComponent: () => import('./login/login.component')
+      .then(m => m.LoginComponent)
   },
   {
     path: '',

@@ -23,7 +23,6 @@ export class AuthService {
       { headers: headers, withCredentials: true, responseType: 'text' } // IMPORTANT → required to receive cookie
     ).pipe(
       tap((res: any) => {
-        console.log('Login successful:', res);
         // Backend sets cookie. Here we just store login status.
         localStorage.setItem('isLoggedIn', 'true');
       })

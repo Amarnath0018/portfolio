@@ -23,20 +23,22 @@ export class LandingPageComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  login(email: string, password: string) {
+  guestLogin(email: string, password: string) {
     this.loading = true;
 
     this.authService.login(email, password).subscribe({
       next: (res) => {
-      console.log("Login ", res);
         this.loading = false;
         this.router.navigate(['/home']); // Navigate to next page
       },
       error: (err) => {
-      console.log("error ",err);
         this.loading = false;
         this.errorMessage = 'Invalid email or password';
       }
     });
+  }
+
+  login(){
+    this.router.navigate(['/login']);
   }
 }

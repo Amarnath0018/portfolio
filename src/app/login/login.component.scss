@@ -1,0 +1,83 @@
+:host {
+	display: block;
+}
+
+.login-page {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Background image (landingPage) with subtle dark overlay for legibility */
+.login-page {
+  background-image: linear-gradient(rgba(6,18,46,0.6), rgba(6,18,46,0.6)), url('/assets/images/login_background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.glass-card {
+	width: 100%;
+	max-width: 420px;
+	padding: 2rem;
+	border-radius: 16px;
+	background: rgba(255, 255, 255, 0.06);
+	box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+	backdrop-filter: blur(8px) saturate(120%);
+	-webkit-backdrop-filter: blur(8px) saturate(120%);
+	border: 1px solid rgba(255,255,255,0.08);
+	color: #fff;
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+.login-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.full {
+	width: 100%;
+    outline: #ffffff;
+}
+
+.cta {
+	margin-top: 0.25rem;
+	padding: 12px 16px;
+	border-radius: 999px;
+	font-weight: 600;
+}
+
+/* Validation message styling override for dark background */
+mat-error {
+	color: #ffffff
+}
+
+@media (max-width: 480px) {
+	.glass-card {
+		padding: 1.25rem;
+		border-radius: 12px;
+	}
+}
+
+mat-label {
+  color: #ffffff;
+}
+
+::ng-deep .mat-input-element::placeholder {
+  color: white !important;
+  opacity: 1 !important;  // Important for browsers that fade placeholder
+}
+::ng-deep .mat-input-element {
+  color: white !important;
+}
+input.mat-input-element {
+  color: #ffffff;
+}
